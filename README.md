@@ -3,7 +3,7 @@ Desafio: Criação de uma lógica para a identificação de produtos vencidos na
 
 Identificação de Danones vencidos em lojas a partir de um DataSet com o seguinte formato:
 
-Imagem 1
+<img src="imagens_readme/Imagem1.png" width="800">
 
 Como não temos a validade dos produtos no nosso banco de dados, considera-se que a validade é de 11 dias desde a chegada do produto na loja.
 Como regra, há duas diretrizes:
@@ -17,26 +17,27 @@ Dessa forma temos: <br>
 •	__Estoque final__: Quantidade de Danones em estoque no final do dia <br>
 •	__Quantidade adicionada__: Quantidade de Danones chegando à loja (novo lote). Números negativos nesta coluna representam ajustes no DataSet sobre a quantidade do produto. <br>
 
-Imagem 2
+<img src="imagens_readme/Imagem2.png" width="800">
 
 Neste exemplo, observa-se que no dia 12/07/2021, 200 Danones foram adicionados ao estoque. No dia 09/07/2021 houve um ajuste de -2. <br>
 No primeiro dia do DataSet, não sabemos o dia de chegada dos produtos. A análise será mais confiável a partir do primeiro lote registrado.
 
 Na tabela abaixo, observa-se os dias onde houve chegada de novos produtos nas lojas:
 
-Imagem 3
+<img src="imagens_readme/Imagem3.png" width="800">
 
-Foi criada uma função que identifica os lotes, a quantidade de Danones restantes de cada lote em cada loja. A função também cria um DataFrame com o histórico de alertas de produtos vencidos ou próximos da validade.<br>
+Foi criada uma função que identifica os lotes, a quantidade de Danones restantes de cada lote em cada loja. A função também cria um DataFrame com o histórico de alertas de produtos vencidos ou próximos da validade.
+
 Na tabela abaixo visualiza-se a quantidade de produtos de cada estoque para a loja 1:
 
-Imagem 4
+<img src="imagens_readme/Imagem4.png" width="350">
 
 Observa-se que no último dia do DataSet, ainda há 46 Danones disponíveis. 40 do lote 13, que chegou no dia 01/11 e 6 do lote anterior, que chegou no dia 28/10.
 
 A função criada gera um aviso de produtos vencidos ou próximos da data de validade (a partir do sétimo dia desde a chegada).<br>
 Abaixo está um exemplo do histórico de alertas da loja 2:
 
-Imagem 5
+<img src="imagens_readme/Imagem5.png" width="800">
 
 A partir da lógica criada, é possível criar uma aplicação capaz de emitir alertas e consultar o histórico de alertas emitidos.
 
